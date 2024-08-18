@@ -1,0 +1,13 @@
+_AIRBYTE_RAW_ID,_AIRBYTE_EXTRACTED_AT,_AIRBYTE_META,_AIRBYTE_GENERATION_ID,ID,DATA
+c83accb3-0370-435e-abe6-b90075e5f005,2024-08-18 21:48:50.251 Z,"{
+  ""changes"": [],
+  ""sync_id"": 35
+}",0,1,"{""tags"": [""Python"", ""Programming"", ""Tutorial""], ""title"": ""Learning Python"", ""author"": ""Alice"", ""content"": ""Python is a versatile programming language..."", ""published_date"": ""2024-08-18""}"
+9415981e-eb17-431d-98d5-f07de8e62c2d,2024-08-18 21:48:50.251 Z,"{
+  ""changes"": [],
+  ""sync_id"": 35
+}",0,2,"{""tags"": [""Docker"", ""Containers"", ""DevOps""], ""title"": ""Introduction to Docker"", ""author"": ""Bob"", ""content"": ""Docker is an open-source platform..."", ""published_date"": ""2024-08-17""}"
+d005aed7-2a98-46a3-82ec-595acc0a3a13,2024-08-18 21:48:50.251 Z,"{
+  ""changes"": [],
+  ""sync_id"": 35
+}",0,3,"{""tags"": [""Snowflake"", ""Data Warehouse"", ""Cloud""], ""title"": ""Getting Started with Snowflake"", ""author"": ""Charlie"", ""content"": ""Snowflake is a cloud-based data warehousing platform..."", ""published_date"": ""2024-08-16""}"

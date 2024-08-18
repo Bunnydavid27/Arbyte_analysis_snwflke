@@ -1,0 +1,23 @@
+After creating docker yml file and adding commands
+
+Then: 
+	Run this command : docker-compose -f Postgress_dckr.yml up -d #for creating and running container
+
+
+
+Using THe container:
+		After the docker container is running open it in the docker Application you can see running status.So click on the The container dropdown then click on the application Then Exec and Open The External Terminal.
+
+
+After The Terminal Open's up:
+		'psql -U postgres' enter the command you will enter the application
+
+
+
+\l command to see the list of databases 
+'q' in windows used for return back
+\c to change dir database
+
+
+
+
