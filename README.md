@@ -1,10 +1,3 @@
-# Arbyte_analysis_snwflke
-
-
-Here’s a README file that you can include in your GitHub repository:
-
----
-
 # Arbyte Analysis with Snowflake
 
 This project demonstrates an ETL pipeline using Docker, PostgreSQL, Airbyte, and Snowflake. The pipeline is designed to extract data from PostgreSQL and load it into Snowflake using Airbyte for real-time synchronization.
