@@ -94,64 +94,9 @@ CREATE DATABASE airbyte;
 
 ### Step 4: Set Up Snowflake
 
-In Snowflake, you'll need to create the necessary roles, users, warehouses, databases, and schemas to store data. Here's a brief overview of the SQL script:
+In Snowflake, you'll need to create the necessary roles, users, warehouses, databases, and schemas to store data. The Snowflake sql file can be found in the repository.
 
-```sql
-set airbyte_role = 'AIRBYTE_ROLE';
-set airbyte_username = 'AIRBYTE_USER';
-set airbyte_warehouse = 'AIRBYTE_WAREHOUSE';
-set airbyte_database = 'AIRBYTE_DATABASE';
-set airbyte_schema = 'AIRBYTE_SCHEMA';
-set airbyte_password = 'airbyte@123';
 
---- Create airbyte role
-use role securityadmin;
-create role if not exists identifier($airbyte_role);
-grant role identifier($airbyte_role) to role sysadmin;
-
---- Create airbyte user 
-create user if not exists identifier($airbyte_username)
-password = $airbyte_password
-default_role = $airbyte_role
-default_warehouse = $airbyte_warehouse;
-grant role identifier($airbyte_role) to user identifier($airbyte_username);
-use role sysadmin;
-
---- Create airbyte warehouse
-create warehouse if not exists identifier($airbyte_warehouse)
-warehouse_size = xsmall
-warehouse_type = standard
-auto_suspend = 60
-auto_resume = true
-initially_suspended = true;
-
---- Create airbyte database 
-create database if not exists identifier($airbyte_database);
-
---- Grant airbyte warehouse access
-grant USAGE
-on warehouse identifier($airbyte_warehouse)
-to role identifier($airbyte_role);
-
---- Grant airbyte database access 
-grant OWNERSHIP
-on database identifier($airbyte_database)
-to role identifier($airbyte_role);
-
-commit;
-
-begin; 
-
-USE DATABASE identifier($airbyte_database);
-
---- Create schema for airbyte data
-create schema if not exists identifier($airbyte_schema);
-
-GRANT ALL PRIVILEGES ON SCHEMA identifier($airbyte_schema) TO ROLE identifier($airbyte_role);
-commit;
-
-begin;
-```
 
 ### Step 5: Use Airbyte to Transfer Data
 
@@ -164,7 +109,3 @@ Feel free to fork this project, submit issues, and make pull requests!
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-This README covers all the steps discussed and provides a comprehensive guide for setting up and running the ETL pipeline.
